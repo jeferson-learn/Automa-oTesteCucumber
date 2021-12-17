@@ -20,10 +20,16 @@ public class CadastroStep extends RunCucumberTest {
         cadastroPage.selecionaAniversario(3, 11, "1992");
         cadastroPage.preencheEndereco("Setor 1 Quadra N");
         cadastroPage.preencheCidade("Canoas");
+        cadastroPage.selecioneEstado("Colorado");
+        cadastroPage.preenchePostalCode("88800");
+//        cadastroPage.selecionePais("");
+        cadastroPage.preencheTelefone("98765432");
+        cadastroPage.preencheAssign("jefy@gmail.com");
     }
 
     @Quando("^clico em registrar$")
     public void clico_em_registrar() {
+        cadastroPage.clicaBotaoRegistrar();
     }
 
     @Então("^vejo a mensagem de cadastro realizado com sucesso$")
