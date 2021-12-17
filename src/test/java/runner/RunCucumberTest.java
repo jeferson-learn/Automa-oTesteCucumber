@@ -31,7 +31,8 @@ public class RunCucumberTest {
     }
 
     @AfterClass
-    public static void step() {
+    public static void step() throws InterruptedException {
+        Thread.sleep(3000);
         driver.quit();
     }
 }

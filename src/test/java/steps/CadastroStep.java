@@ -17,7 +17,9 @@ public class CadastroStep extends RunCucumberTest {
         cadastroPage.preencheNome("Jeferson");
         cadastroPage.preencheSobrenome("Lopes");
         cadastroPage.preencheSenha("123456");
-        cadastroPage.selecionaAniversario(3, 11, 1992);
+        cadastroPage.selecionaAniversario(3, 11, "1992");
+        cadastroPage.preencheEndereco("Setor 1 Quadra N");
+        cadastroPage.preencheCidade("Canoas");
     }
 
     @Quando("^clico em registrar$")

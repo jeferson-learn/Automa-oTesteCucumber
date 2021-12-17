@@ -18,14 +18,20 @@ public class CadastroPage extends Utils {
     private By select_months_field = By.id("months");
     private By select_years_field = By.id("years");
 
+    private By adress = By.id("address1");
+    private By city = By.id("city");
+
+
     public CadastroPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void selectTitle(Integer type) {
         if(type == 1) {
+            esperarElementoEstarPresente(titleM, 10);
             driver.findElement(titleM).click();
         } else if (type == 2) {
+            esperarElementoEstarPresente(titleF, 10);
             driver.findElement(titleF).click();
         }
     }
@@ -40,15 +46,22 @@ public class CadastroPage extends Utils {
         driver.findElement(password).sendKeys(senha);
     }
 
-    public void selecionaAniversario(Integer day, Integer month, Integer year) {
+    public void selecionaAniversario(Integer day, Integer month, String year) {
         Select select_day = new Select(driver.findElement(select_day_field));
-        select_day.deselectByIndex(day);
+        select_day.selectByIndex(day);
 
         Select select_month = new Select(driver.findElement(select_months_field));
-        select_month.deselectByIndex(month);
+        select_month.selectByIndex(month);
 
         Select select_year = new Select(driver.findElement(select_years_field));
-        select_year.deselectByIndex(year);
+        select_year.selectByValue(year);
+    }
 
+    public void preencheEndereco(String endereco) {
+        driver.findElement(adress).sendKeys(endereco);
+    }
+
+    public void preencheCidade(String cidade) {
+        driver.findElement(city).sendKeys(cidade);
     }
 }
