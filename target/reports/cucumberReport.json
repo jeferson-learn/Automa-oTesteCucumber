@@ -1,0 +1,85 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: pt"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 10,
+        "name": "Visualizar código de desconto",
+        "description": "",
+        "id": "receber-o-cupom-desconto-da-qazando;visualizar-código-de-desconto",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 6608770500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "que estou no site da Qazando",
+            "match": {
+              "location": "DescontosStep.acessar_site_Qazando()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 115770300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "eu preencho no site da Qazando",
+            "match": {
+              "location": "DescontosStep.eu_preencho_no_site_da_Qazando()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 23900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "clico em ganhar cupom",
+            "match": {
+              "location": "DescontosStep.clico_em_ganhar_cupom()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "o eu vejo o código de desconto",
+            "match": {},
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@gerar_cupom"
+          }
+        ]
+      }
+    ],
+    "name": "Receber o cupom desconto da Qazando",
+    "description": "Eu como usuário da Qazando\r\nquero receber um cupom de desconto\r\npara comprar um curso com valor reduzido",
+    "id": "receber-o-cupom-desconto-da-qazando",
+    "keyword": "Funcionalidade",
+    "uri": "desconto.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@desconto"
+      }
+    ]
+  }
+]
