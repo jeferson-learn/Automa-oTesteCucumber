@@ -32,8 +32,9 @@ public class CadastroStep extends RunCucumberTest {
         cadastroPage.clicaBotaoRegistrar();
     }
 
-    @Então("^vejo a mensagem de cadastro realizado com sucesso$")
-    public void vejo_a_mensagem_de_cadastro_realizado_com_sucesso() {
+    @Então("^vejo cadastro realizado com sucesso$")
+    public void vejo_cadastro_realizado_com_sucesso() {
+
     }
 
 
