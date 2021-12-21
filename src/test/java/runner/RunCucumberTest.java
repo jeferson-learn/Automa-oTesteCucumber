@@ -18,7 +18,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //        tags = {"~@ignore"},
 //        tags = {"@gerar_cupom"},
 //        tags = {"@teste_falha"},
-        tags = {"@cadastro-sucesso"},
+//        tags = {"@cadastro-sucesso"},
+        tags = {"@enviar-mensagem-sucesso"},
         glue = {"steps"}
 )
 public class RunCucumberTest {
