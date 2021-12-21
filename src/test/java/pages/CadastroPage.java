@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -97,5 +98,10 @@ public class CadastroPage extends Utils {
 
     public void clicaBotaoRegistrar() {
         driver.findElement(registerButton).click();
+    }
+
+    public void validaCadastro(String nome, String sobrenome) {
+        String resultadoFinal = driver.findElement(By.cssSelector("nav a span")).getText();
+        Assert.assertEquals(nome + " " + sobrenome, resultadoFinal);
     }
 }
